@@ -6,14 +6,14 @@ namespace PadawansTask5
     {
         public static string CheckIfSymmetric(int[] source)
         {
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source)); 
+            }
+
             if(source.Length == 0)
             {
                 throw new ArgumentException("Source Cannot Be Empty"); 
-            }
-
-            if(source == null)
-            {
-                throw new ArgumentNullException(nameof(source)); 
             }
 
             string Message = "Yes";
